@@ -12,7 +12,13 @@ require("dotenv").config();
 console.log(process.env.DB_URL);
 const knex = require('knex')({
     client: 'pg',
-    connection: process.env.DB_URL
+    connection: {
+        user: process.env.DB_NAME,
+        host: process.env.DB_SERVER,
+        database: process.env.DB_NAME,
+        password: process.env.DB_SECRET,
+        port: 5432
+    }
 });
 
 // const pool = new Pool({
