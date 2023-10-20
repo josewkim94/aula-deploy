@@ -1,12 +1,18 @@
+// const knex = require('knex')({
+//     client: 'pg',
+//     connection: {
+//         user: 'postgres',
+//         host: 'localhost',
+//         database: 'market_cubos',
+//         password: 'root',
+//         port: 5432
+//     }
+// });
+require("dotenv").config();
+console.log(process.env.DB_URL);
 const knex = require('knex')({
     client: 'pg',
-    connection: {
-        user: 'postgres',
-        host: 'localhost',
-        database: 'market_cubos',
-        password: 'root',
-        port: 5432
-    }
+    connection: process.env.DB_URL
 });
 
 // const pool = new Pool({
