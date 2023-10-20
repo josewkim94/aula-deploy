@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/app.js"
+    "dev": "nodemon ./src/app.js",
+    "vercel-build": "npx tsup src"
   },
   "author": "jose",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "pg": "^8.11.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "tsup": "^7.2.0"
   }
 }
